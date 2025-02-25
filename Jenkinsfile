@@ -9,7 +9,7 @@ pipeline {
         }
         stage ("Tag") {
             steps {
-                sh 'docker tag image1 shaikmustafa/paytm:movie'
+                sh 'docker tag image3 shaikmustafa/paytm:movie'
             }
         }
         stage ("Push") {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh 'docker run -itd --name movie-app -p 9999:80 shaikmustafa/paytm:movie'
+                sh 'docker run -itd --name movie-app -p 3333:80 shaikmustafa/paytm:movie'
             }
         }
     }
