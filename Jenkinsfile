@@ -23,7 +23,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh 'docker run -itd --name bus-app -p 8888:80 shaikmustafa/bus:movie'
+                sh 'docker run -itd --name bus-app -p 6666:80 shaikmustafa/paytm:bus'
             }
         }
     }
