@@ -12,7 +12,7 @@ pipeline {
                 sh 'docker tag image2 shaikmustafa/paytm:bus'
             }
         }
-       stages {
+       
         stage('push') {
             steps {
                withDockerRegistry(credentialsId: 'docker_hub') {
@@ -20,7 +20,7 @@ pipeline {
                 }
             }
         }
-    }
+    
         stage ("Deploy") {
             steps {
                 sh 'docker run -itd --name bus-app -p 2222:80 shaikmustafa/paytm:bus'
