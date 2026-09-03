@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stages {
-        stage('Hello') {
+        stage('push') {
             steps {
                withDockerRegistry(credentialsId: 'docker_hub') {
     // some block
